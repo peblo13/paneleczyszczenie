@@ -1935,8 +1935,11 @@ body {
 
 /* Tablets & Small Laptops: 600px - 768px */
 @media (max-width: 768px) {
-    :root {
-        font-size: 14px;
+    html {
+        font-size: 26px; /* bardzo duża czcionka na mobile */
+    }
+    body {
+        font-size: 1.25rem;
     }
 
     .navbar {
@@ -2552,487 +2555,38 @@ body {
 /* Very Small Phones: < 480px (iPhone SE, iPhone 8, etc.) */
 @media (max-width: 480px) {
     :root {
-        font-size: 12px;
+        font-size: 30px; /* ekstremalnie duża czcionka na najmniejszych ekranach */
     }
-
     body {
-        line-height: 1.5;
+        font-size: 1.35rem;
     }
-
-    .navbar {
-        padding: 0.5rem 0;
-    }
-
-    .nav-container {
-        padding: 0 0.5rem;
-    }
-
-    .logo {
-        font-size: 1rem;
-    }
-
-    .logo-icon {
-        font-size: 1.1rem;
-    }
-
-    .hero {
-        margin-top: 50px;
-        padding: 1rem 0.75rem;
-        min-height: calc(100vh - 50px);
-    }
-
-    .hero-title {
-        font-size: 1.25rem;
-        gap: 0.3rem;
-        margin-bottom: 0.75rem;
-    }
-
-    .hero-subtitle {
-        font-size: 0.85rem;
-        margin-bottom: 1rem;
-        line-height: 1.4;
-    }
-
-    .cta-button {
-        padding: 0.6rem 1.2rem;
-        font-size: 0.8rem;
-        letter-spacing: 0.3px;
-    }
-
-    .button-text {
-        display: none;
-    }
-
-    .hero-graphic {
-        margin-top: 1rem;
-        min-height: 200px;
-    }
-
-    .solar-panel-3d {
-        width: 150px;
-        height: 120px;
-    }
-
-    .section-title {
-        font-size: 1.25rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .section-subtitle {
-        font-size: 0.85rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .services,
-    .benefits,
-    .testimonials,
-    .coverage,
-    .pricing,
-    .stats,
-    .blog,
-    .certifications,
-    .faq,
-    .contact,
-    .video-section,
-    .chatbot-section {
-        padding: 1.5rem 0.75rem;
-    }
-
-    .services-grid,
-    .benefits-container,
-    .testimonials-grid,
-    .stats-grid,
-    .blog-grid,
-    .certifications-grid,
-    .pricing-grid,
-    .gallery-grid {
-        gap: 0.75rem;
-    }
-
-    .service-card,
-    .testimonial-card,
-    .stat-card,
-    .cert-item,
-    .blog-card,
-    .pricing-card {
-        padding: 1rem;
-    }
-
-    .service-icon {
-        font-size: 2rem;
-        margin-bottom: 0.75rem;
-    }
-
-    .contact-wrapper {
-        gap: 1rem;
-        padding: 1rem;
-    }
-
-    .contact-info {
-        gap: 1rem;
-    }
-
-    .contact-method {
-        padding: 1.2rem;
-    }
-
-    .contact-method h3 {
-        font-size: 0.95rem;
-        margin-bottom: 0.75rem;
-    }
-
-    .whatsapp-link,
-    .phone-link {
-        font-size: 1rem;
-        gap: 0.75rem;
-    }
-
-    .whatsapp-icon,
-    .phone-icon {
-        font-size: 1.3rem;
-    }
-
-    .contact-note {
-        font-size: 0.8rem;
-        margin-top: 0.4rem;
-    }
-
-    .contact-form {
-        gap: 0.6rem;
-        padding: 1rem;
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-        padding: 0.5rem 0.6rem;
-        font-size: 0.85rem;
-    }
-
-    .submit-btn {
-        padding: 0.6rem;
-        font-size: 0.8rem;
-        margin-top: 0.5rem;
-    }
-
-    .calculator-container {
-        gap: 1rem;
-        padding: 1rem;
-    }
-
-    .calculator-form {
-        gap: 1rem;
-    }
-
-    .calculator-form label {
-        font-size: 0.85rem;
-        margin-bottom: 0.3rem;
-    }
-
-    .calculator-form input {
-        padding: 0.5rem;
-        font-size: 0.85rem;
-    }
-
-    #dirt-value {
-        margin-top: 0.3rem;
-    }
-
-    .result-item {
-        padding: 0.75rem;
-    }
-
-    .result-item h3 {
-        font-size: 0.85rem;
-        margin-bottom: 0.3rem;
-    }
-
-    .result-value {
-        font-size: 1.3rem;
-    }
-
-    .coverage-map {
-        height: 200px;
-    }
-
-    .coverage-legend {
-        padding: 0.6rem;
-        font-size: 0.75rem;
-        bottom: 10px;
-        left: 10px;
-    }
-
-    .coverage-legend p {
-        margin: 0.2rem 0;
-    }
-
-    .coverage-info h3 {
-        font-size: 1.1rem;
-    }
-
-    .coverage-list {
-        margin-top: 1rem;
-    }
-
-    .coverage-list li {
-        font-size: 0.85rem;
-        padding: 0.3rem 0;
-    }
-
-    .video-container {
-        gap: 1rem;
-    }
-
-    .video-placeholder {
-        height: 200px;
-        gap: 0.5rem;
-    }
-
-    .play-button {
+    .scroll-to-top {
         width: 40px;
         height: 40px;
-        font-size: 1rem;
+        bottom: 1rem;
+        right: 1rem;
     }
-
-    .video-placeholder p {
-        font-size:  0.8rem;
+    .scroll-to-top svg {
+        width: 20px;
+        height: 20px;
     }
-
-    .video-caption {
-        padding: 0.6rem;
-        font-size: 0.85rem;
-    }
-
-    .video-info h3 {
-        font-size: 1.1rem;
-        margin-bottom: 0.75rem;
-    }
-
-    .video-steps li {
-        padding: 0.6rem 0;
-        padding-left: 45px;
-        font-size: 0.85rem;
-    }
-
-    .step-number {
-        width: 30px;
-        height: 30px;
-        font-size: 0.75rem;
-    }
-
-    .chatbot-container {
+    .social-links {
         gap: 1rem;
     }
-
-    .chat-window {
-        height: 300px;
+    .social-links a {
+        width: 35px;
+        height: 35px;
     }
-
-    .chat-messages {
-        padding: 0.75rem;
-        gap: 0.6rem;
+    .cta-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1.1rem;
     }
-
-    .bot-message p,
-    .user-message p {
-        max-width: 90%;
-        padding: 0.6rem;
-        font-size: 0.85rem;
-    }
-
-    .chat-input {
-        padding: 0.75rem;
-        gap: 0.25rem;
-    }
-
-    .chat-input input {
-        padding: 0.5rem;
-        font-size: 0.8rem;
-    }
-
-    .chat-input button {
-        padding: 0.5rem 0.75rem;
-        font-size: 0.75rem;
-    }
-
-    .chatbot-info h3 {
+    .article-cta {
+        padding: 0.5rem 1rem;
         font-size: 1rem;
     }
-
-    .quick-buttons {
-        gap: 0.5rem;
-    }
-
-    .quick-btn {
-        padding: 0.5rem;
-        font-size: 0.8rem;
-    }
-
-    .chatbot-note {
-        font-size: 0.75rem;
-        padding: 0.6rem;
-    }
-
-    .pricing-card {
-        padding: 1rem;
-    }
-
-    .featured-badge {
-        font-size: 0.65rem;
-        padding: 0.3rem 0.6rem;
-        top: -10px;
-    }
-
-    .pricing-card h3 {
+    .cookie-content p {
         font-size: 1rem;
-        margin-bottom: 0.75rem;
-        margin-top: 0.3rem;
-    }
-
-    .price {
-        font-size: 1.2rem;
-        margin-bottom: 0.3rem;
-    }
-
-    .price-description {
-        font-size: 0.8rem;
-        margin-bottom: 1rem;
-    }
-
-    .price-features {
-        margin-bottom: 1rem;
-    }
-
-    .price-features li {
-        padding: 0.5rem 0;
-        font-size: 0.85rem;
-    }
-
-    .price-btn {
-        padding: 0.6rem;
-        font-size: 0.75rem;
-    }
-
-    .benefit-number {
-        font-size: 1.5rem;
-        margin-bottom: 0.75rem;
-    }
-
-    .benefit-item h3 {
-        font-size: 1rem;
-    }
-
-    .benefit-item p {
-        font-size: 0.85rem;
-    }
-
-    .stat-number {
-        font-size: 1.3rem;
-    }
-
-    .stat-label {
-        font-size: 0.85rem;
-    }
-
-    .blog-image-placeholder {
-        height: 120px;
-        font-size: 2.5rem;
-    }
-
-    .blog-card h3 {
-        font-size: 1rem;
-        padding: 0.75rem 0.75rem 0.3rem;
-    }
-
-    .blog-excerpt {
-        padding: 0.3rem 0.75rem;
-        font-size: 0.85rem;
-    }
-
-    .blog-link {
-        padding: 0.75rem 0.75rem 0.3rem;
-        font-size: 0.85rem;
-    }
-
-    .cert-icon {
-        font-size: 2rem;
-    }
-
-    .testimonial-text {
-        font-size: 0.85rem;
-        margin-bottom: 1rem;
-    }
-
-    .stars {
-        font-size: 1rem;
-        margin-bottom: 0.75rem;
-    }
-
-    .testimonial-author {
-        gap: 0.75rem;
-    }
-
-    .author-avatar {
-        width: 30px;
-        height: 30px;
-        font-size: 0.75rem;
-    }
-
-    .author-name {
-        font-size: 0.9rem;
-    }
-
-    .author-location {
-        font-size: 0.75rem;
-    }
-
-    .faq-question {
-        padding: 0.85rem;
-        font-size: 0.85rem;
-    }
-
-    .faq-toggle {
-        font-size: 1rem;
-    }
-
-    .faq-answer p {
-        padding: 0 0.85rem 0.85rem;
-        font-size: 0.85rem;
-        line-height: 1.4;
-    }
-
-    .newsletter-content {
-        padding: 0;
-    }
-
-    .newsletter-content h2 {
-        font-size: 1.25rem;
-        margin-bottom: 0.75rem;
-    }
-
-    .newsletter-content p {
-        font-size: 0.85rem;
-        margin-bottom: 1.2rem;
-    }
-
-    .newsletter-form {
-        flex-direction: column;
-    }
-
-    .newsletter-form input {
-        width: 100%;
-        padding: 0.5rem;
-        font-size: 0.85rem;
-    }
-
-    .newsletter-form button {
-        width: 100%;
-        padding: 0.6rem;
-        font-size: 0.8rem;
-    }
-
-    .footer {
-        padding: 1rem 0.75rem;
-        font-size: 0.85rem;
     }
 }
 
@@ -3453,10 +3007,10 @@ body {
 /* Responsive adjustments for new features */
 @media (max-width: 768px) {
     html {
-        font-size: 22px; /* jeszcze większa czcionka na mobile */
+        font-size: 26px; /* bardzo duża czcionka na mobile */
     }
     body {
-        font-size: 1.1rem;
+        font-size: 1.25rem;
     }
     .scroll-to-top {
         width: 45px;
@@ -3491,10 +3045,10 @@ body {
 
 @media (max-width: 480px) {
     html {
-        font-size: 24px; /* największa czcionka na bardzo małych ekranach */
+        font-size: 30px; /* ekstremalnie duża czcionka na najmniejszych ekranach */
     }
     body {
-        font-size: 1.2rem;
+        font-size: 1.35rem;
     }
     .scroll-to-top {
         width: 40px;
