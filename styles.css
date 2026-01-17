@@ -23,6 +23,7 @@
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
+    font-size: 20px; /* zwiększony bazowy rozmiar czcionki */
 }
 
 body {
@@ -3453,77 +3454,77 @@ body {
 
 /* Responsive adjustments for new features */
 @media (max-width: 768px) {
+    html {
+        font-size: 22px; /* jeszcze większa czcionka na mobile */
+    }
+    body {
+        font-size: 1.1rem;
+    }
     .scroll-to-top {
         width: 45px;
         height: 45px;
         bottom: 1.5rem;
         right: 1.5rem;
     }
-
     .footer-content {
         flex-direction: column;
         gap: 1.5rem;
     }
-
     .cookie-content {
         flex-direction: column;
         text-align: center;
     }
-
     .cookie-buttons {
         width: 100%;
         flex-direction: column;
     }
-
     .btn-cookie-reject,
     .btn-cookie-accept {
         width: 100%;
     }
-
     .section-cta {
         margin-top: 1.5rem;
     }
-
     .cta-button {
         padding: 0.9rem 2rem;
-        font-size: 0.95rem;
+        font-size: 1.1rem;
     }
 }
 
 @media (max-width: 480px) {
+    html {
+        font-size: 24px; /* największa czcionka na bardzo małych ekranach */
+    }
+    body {
+        font-size: 1.2rem;
+    }
     .scroll-to-top {
         width: 40px;
         height: 40px;
         bottom: 1rem;
         right: 1rem;
     }
-
     .scroll-to-top svg {
         width: 20px;
         height: 20px;
     }
-
     .social-links {
         gap: 1rem;
     }
-
     .social-links a {
         width: 35px;
         height: 35px;
     }
-
     .cta-button {
         padding: 0.8rem 1.5rem;
-        font-size: 0.9rem;
+        font-size: 1.1rem;
     }
-
     .article-cta {
         padding: 0.5rem 1rem;
-        font-size: 0.85rem;
+        font-size: 1rem;
     }
-
     .cookie-content p {
-        font-size: 0.85rem;
+        font-size: 1rem;
     }
 }
 
