@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SolarClean - Profesjonalne Czyszczenie Paneli Fotowoltaicznych</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "SolarClean",
+        "description": "Profesjonalne czyszczenie paneli fotowoltaicznych w Polsce",
+        "url": "https://solarclean.pl",
+        "telephone": "+48889555879",
+        "email": "info@solarclean.pl",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "PL"
+        },
+        "areaServed": "PL",
+        "priceRange": "400-1500 PLN"
+    }
+    </script>
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loader"></div>
+        <p>Ładowanie...</p>
+    </div>
+
+    <!-- Animated Background -->
+    <div class="background">
+        <div class="stars"></div>
+        <div class="floating-particles"></div>
+        <canvas id="canvas-bg"></canvas>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">SolarClean</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Usługi</a></li>
+                <li><a href="#benefits">Korzyści</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="word" style="--index: 0">Energia</span>
+                <span class="word" style="--index: 1">z</span>
+                <span class="word" style="--index: 2">Czystością</span>
+            </h1>
+            <p class="hero-subtitle">Profesjonalne czyszczenie paneli fotowoltaicznych dla maksymalnej efektywności energii</p>
+            <button class="cta-button">
+                <span class="button-text">Umów konsultację</span>
+                <span class="button-glow"></span>
+            </button>
+        </div>
+        <div class="hero-graphic">
+            <div class="solar-panel-3d"></div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2 class="section-title">Nasze Usługi</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">💧</div>
+                <h3>Czyszczenie Profesjonalne</h3>
+                <p>Zaawansowana technologia czyszczenia bez skaleczania powierzchni paneli</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🔍</div>
+                <h3>Inspekcja Termowizyjna</h3>
+                <p>Diagnostyka stanu paneli z wykorzystaniem kamery termowizyjnej</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🛡️</div>
+                <h3>Ochrona i Konserwacja</h3>
+                <p>Ochrona przeciwkorozji i konserwacja długoterminowa paneli</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">📊</div>
+                <h3>Raport Wydajności</h3>
+                <p>Szczegółowy raport o wzroście wydajności po czyszczeniu</p>
+            </div>
+        </div>
+        <div class="section-cta">
+            <button class="cta-button" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+                Umów Konsultację Teraz ⚡
+            </button>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="benefits">
+        <h2 class="section-title">Dlaczego My?</h2>
+        <div class="benefits-container">
+            <div class="benefit-item">
+                <div class="benefit-number">01</div>
+                <h3>Doświadczenie</h3>
+                <p>Ponad 500 zrealizowanych projektów w całej Polsce</p>
+            </div>
+            <div class="benefit-item">
+                <div class="benefit-number">02</div>
+                <h3>Technologia</h3>
+                <p>Najnowsze urządzenia i metody czyszczenia paneli</p>
+            </div>
+            <div class="benefit-item">
+                <div class="benefit-number">03</div>
+                <h3>Efektywność</h3>
+                <p>Wzrost wydajności do 25% po czyszczeniu</p>
+            </div>
+            <div class="benefit-item">
+                <div class="benefit-number">04</div>
+                <h3>Bezpieczeństwo</h3>
+                <p>Certyfikowani specjaliści i pełne asekuracje</p>
+            </div>
+        </div>
+        <div class="section-cta">
+            <button class="cta-button" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+                Zarezerwuj Wizytę Darmową 🎯
+            </button>
+        </div>
+    </section>
+
+    <!-- Gallery Before/After Section -->
+    <section id="gallery" class="gallery">
+        <h2 class="section-title">Galeria Realizacji</h2>
+        <p class="section-subtitle">Zobacz jak dramatycznie zmieniamy wydajność Twoich paneli</p>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <div class="before-after-slider">
+                    <div class="img-container">
+                        <img src="" alt="Przed czyszczeniem" data-src="placeholder-before-1.jpg" class="before-img">
+                        <div class="label">PRZED</div>
+                    </div>
+                    <div class="img-container">
+                        <img src="" alt="Po czyszczeniu" data-src="placeholder-after-1.jpg" class="after-img">
+                        <div class="label">PO</div>
+                    </div>
+                </div>
+                <p class="gallery-caption">Wzrost wydajności: +23%</p>
+            </div>
+            <div class="gallery-item">
+                <div class="before-after-slider">
+                    <div class="img-container">
+                        <img src="" alt="Przed" data-src="placeholder-before-2.jpg" class="before-img">
+                        <div class="label">PRZED</div>
+                    </div>
+                    <div class="img-container">
+                        <img src="" alt="Po" data-src="placeholder-after-2.jpg" class="after-img">
+                        <div class="label">PO</div>
+                    </div>
+                </div>
+                <p class="gallery-caption">Wzrost wydajności: +19%</p>
+            </div>
+            <div class="gallery-item">
+                <div class="before-after-slider">
+                    <div class="img-container">
+                        <img src="" alt="Przed" data-src="placeholder-before-3.jpg" class="before-img">
+                        <div class="label">PRZED</div>
+                    </div>
+                    <div class="img-container">
+                        <img src="" alt="Po" data-src="placeholder-after-3.jpg" class="after-img">
+                        <div class="label">PO</div>
+                    </div>
+                </div>
+                <p class="gallery-caption">Wzrost wydajności: +25%</p>
+            </div>
+            <div class="gallery-item">
+                <div class="before-after-slider">
+                    <div class="img-container">
+                        <img src="" alt="Przed" data-src="placeholder-before-4.jpg" class="before-img">
+                        <div class="label">PRZED</div>
+                    </div>
+                    <div class="img-container">
+                        <img src="" alt="Po" data-src="placeholder-after-4.jpg" class="after-img">
+                        <div class="label">PO</div>
+                    </div>
+                </div>
+                <p class="gallery-caption">Wzrost wydajności: +21%</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section id="calculator" class="calculator">
+        <h2 class="section-title">Kalkulator Oszczędności</h2>
+        <div class="calculator-container">
+            <div class="calculator-form">
+                <label>Moc instalacji (kW):</label>
+                <input type="number" id="power" min="1" max="50" value="5" step="0.5">
+                
+                <label>Bieżące zaśmiecenie (%):</label>
+                <input type="range" id="dirt" min="0" max="100" value="40">
+                <span id="dirt-value">40%</span>
+                
+                <label>Średni koszt kWh (zł):</label>
+                <input type="number" id="kwh-cost" min="0.5" max="5" value="1.5" step="0.1">
+            </div>
+            
+            <div class="calculator-results">
+                <div class="result-item">
+                    <h3>Bieżące straty rocznie</h3>
+                    <p class="result-value" id="current-loss">2,440 zł</p>
+                </div>
+                <div class="result-item">
+                    <h3>Oszczędności po czyszczeniu</h3>
+                    <p class="result-value highlight" id="savings">412 zł/rok</p>
+                </div>
+                <div class="result-item">
+                    <h3>Zwrot z inwestycji</h3>
+                    <p class="result-value" id="roi">~3 miesiące</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <h2 class="section-title">Opinie Klientów</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Profesjonalna obsługa, widoczne rezultaty. Panele świecą jak nowe! Polecam każdemu."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">KR</div>
+                    <div>
+                        <p class="author-name">Krzysztof R.</p>
+                        <p class="author-location">Warszawa</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Wzrost wydajności o 24% dokładnie jak obiecali. Najlepsza inwestycja jaką mogłem zrobić."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">MZ</div>
+                    <div>
+                        <p class="author-name">Magdalena Z.</p>
+                        <p class="author-location">Kraków</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Szybko, niezawodnie i bezpiecznie. Zespół SolarClean to naprawdę profesjonaliści."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">JK</div>
+                    <div>
+                        <p class="author-name">Jan K.</p>
+                        <p class="author-location">Wrocław</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Świetna wycena, ścisłe terminy. Moja rodzina już poleca was wszystkim znajomym."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">AJ</div>
+                    <div>
+                        <p class="author-name">Anna J.</p>
+                        <p class="author-location">Poznań</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Niesamowita transformacja! Wzrost wydajności był dokładnie taki, jaki przewidywali. Teraz moja energia kosztuje mnie znacznie mniej!"</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">TK</div>
+                    <div>
+                        <p class="author-name">Tomasz K.</p>
+                        <p class="author-location">Gdańsk</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Panowie wiedzą co robią! Przyjechali punktualnie, pracowali profesjonalnie i już widzę przychód z moich paneli. Polecam gorąco!"</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">RS</div>
+                    <div>
+                        <p class="author-name">Roman S.</p>
+                        <p class="author-location">Szczecin</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coverage Map Section -->
+    <section id="coverage" class="coverage">
+        <h2 class="section-title">Obszar Naszych Usług</h2>
+        <div class="coverage-container">
+            <div class="coverage-map">
+                <img src="" alt="Mapa pokrycia" data-src="placeholder-map.jpg" class="map-image">
+                <div class="coverage-legend">
+                    <p><span class="legend-active">●</span> Obszar aktywny</p>
+                    <p><span class="legend-coming">●</span> Wkrótce</p>
+                </div>
+            </div>
+            <div class="coverage-info">
+                <h3>Osiągamy cały kraj</h3>
+                <p>Nasz zespół operuje na terenie całej Polski. Jeśli jesteś zainteresowany naszymi usługami, skontaktuj się z nami - dowiedz się, kiedy będziemy w Twojej okolicy.</p>
+                <ul class="coverage-list">
+                    <li>✓ Warszawa i okolice</li>
+                    <li>✓ Kraków i województwo</li>
+                    <li>✓ Wrocław i region</li>
+                    <li>✓ Poznań i okolicę</li>
+                    <li>✓ Gdańsk i Trójmiasto</li>
+                    <li>✓ Inne miasta - na życzenie</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <h2 class="section-title">Nasze Pakiety</h2>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h3>START</h3>
+                <div class="price">Od 400 zł</div>
+                <p class="price-description">Na instalacje do 3kW</p>
+                <ul class="price-features">
+                    <li>✓ Czyszczenie profesjonalne</li>
+                    <li>✓ Raport wizualny</li>
+                    <li>✓ Gwarancja 3 miesiące</li>
+                </ul>
+                <button class="price-btn">Wybierz</button>
+            </div>
+            <div class="pricing-card featured">
+                <div class="featured-badge">NAJPOPULARNIEJSZY</div>
+                <h3>STANDARD</h3>
+                <div class="price">Od 800 zł</div>
+                <p class="price-description">Na instalacje 3-10kW</p>
+                <ul class="price-features">
+                    <li>✓ Czyszczenie profesjonalne</li>
+                    <li>✓ Inspekcja termowizyjna</li>
+                    <li>✓ Raport szczegółowy</li>
+                    <li>✓ Gwarancja 6 miesięcy</li>
+                </ul>
+                <button class="price-btn featured-btn">Wybierz</button>
+            </div>
+            <div class="pricing-card">
+                <h3>PREMIUM</h3>
+                <div class="price">Od 1500 zł</div>
+                <p class="price-description">Na instalacje 10kW+</p>
+                <ul class="price-features">
+                    <li>✓ Czyszczenie profesjonalne</li>
+                    <li>✓ Inspekcja termowizyjna</li>
+                    <li>✓ Ochrona antykorozyjna</li>
+                    <li>✓ Raport szczegółowy</li>
+                    <li>✓ Gwarancja 12 miesięcy</li>
+                </ul>
+                <button class="price-btn">Wybierz</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Counter Section -->
+    <section id="stats" class="stats">
+        <h2 class="section-title">Nasze Osiągnięcia</h2>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number" data-target="523">523</div>
+                <p class="stat-label">Czyszczonych Instalacji</p>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" data-target="2847">2,847</div>
+                <p class="stat-label">KW Czyszczonych</p>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" data-target="156000">156,000</div>
+                <p class="stat-label">Zaoszczędzono kWh</p>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" data-target="98">98%</div>
+                <p class="stat-label">Zadowolenia Klientów</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog/Articles Section -->
+    <section id="blog" class="blog">
+        <h2 class="section-title">Blog i Porady</h2>
+        <div class="blog-grid">
+            <article class="blog-card">
+                <div class="blog-image-placeholder">📚</div>
+                <h3>Jak często czyścić panele słoneczne?</h3>
+                <p class="blog-excerpt">Poznaj optymalne harmonogram czyszczenia paneli, aby utrzymać maksymalną wydajność instalacji przez cały rok.</p>
+                <a href="#" class="blog-link">Czytaj więcej →</a>
+                <button class="article-cta" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Kontakt 📞</button>
+            </article>
+            <article class="blog-card">
+                <div class="blog-image-placeholder">🌧️</div>
+                <h3>Wpływ warunków pogodowych na panele</h3>
+                <p class="blog-excerpt">Dowiedz się, jak deszcz, śnieg i pył wpływają na wydajność Twoich paneli fotowoltaicznych i jak się przed tym bronić.</p>
+                <a href="#" class="blog-link">Czytaj więcej →</a>
+                <button class="article-cta" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Kontakt 📞</button>
+            </article>
+            <article class="blog-card">
+                <div class="blog-image-placeholder">💡</div>
+                <h3>Czy czyszczenie rzeczywiście się opłaca?</h3>
+                <p class="blog-excerpt">Analiza kosztów i zysków czyszczenia profesjonalnego. Dowiedz się, kiedy zwraca się inwestycja.</p>
+                <a href="#" class="blog-link">Czytaj więcej →</a>
+                <button class="article-cta" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Kontakt 📞</button>
+            </article>
+            <article class="blog-card">
+                <div class="blog-image-placeholder">🔧</div>
+                <h3>DIY vs Profesjonalne czyszczenie</h3>
+                <p class="blog-excerpt">Porównanie czyszczenia samodzielnego z usługą profesjonalną. Które rozwiązanie jest dla Ciebie?</p>
+                <a href="#" class="blog-link">Czytaj więcej →</a>
+                <button class="article-cta" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Kontakt 📞</button>
+            </article>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications">
+        <h2 class="section-title">Certyfikaty i Osiągnięcia</h2>
+        <div class="certifications-grid">
+            <div class="cert-item">
+                <div class="cert-icon">🏆</div>
+                <h3>Certyfikowany Partner</h3>
+                <p>Oficjalny partner certificowany producenci paneli</p>
+            </div>
+            <div class="cert-item">
+                <div class="cert-icon">🛡️</div>
+                <h3>ISO 9001</h3>
+                <p>Certyfikacja standardu jakości</p>
+            </div>
+            <div class="cert-item">
+                <div class="cert-icon">⚠️</div>
+                <h3>OHS Certified</h3>
+                <p>Pełny certyfikat bhp i szkolenia</p>
+            </div>
+            <div class="cert-item">
+                <div class="cert-icon">✓</div>
+                <h3>Gwarancja Satysfakcji</h3>
+                <p>100% gwarancja zadowolenia klienta</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <h2 class="section-title">Najczęstsze Pytania</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Ile czasu zajmuje czyszczenie instalacji?</span>
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Czas czyszczenia zależy od rozmiaru instalacji. Średnie gospodarstwo domowe (5-10kW) czyszczmy w 2-4 godziny. Większe instalacje mogą wymagać więcej czasu. Zawsze określimy dokładny czas podczas konsultacji.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Czy czyszczenie może uszkodzić moje panele?</span>
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Nie! Używamy wyłącznie sprawdzonych metod i materiałów bezpiecznych dla paneli. Nasze techniki zostały przetestowane na najnowszych modelach paneli słonecznych. Nasze prace objęte są gwarancją.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Jak często powinienem czyszczać panele?</span>
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Rekomendujemy czyszczenie 2-4 razy w roku, w zależności od warunków lokalnych. W regions pylistych - więcej, w czystych - mniej. Doradztwo online bez dodatkowych kosztów.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Czy pracujecie w moim mieście?</span>
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Działamy na terenie całej Polski. Jeśli jeszcze nie ma nas w Twojej okolicy, skontaktuj się z nami - możemy umówić wizytę lub poczekać na naszą ekspansję w Twój region.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Jakie są Wasze gwarancje?</span>
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Oferujemy gwarancję od 3 do 12 miesięcy w zależności od wybranego pakietu. Gwarancja obejmuje prawidłowość wykonanej pracy i bezpieczeństwo paneli.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section id="video" class="video-section">
+        <h2 class="section-title">Jak Działamy?</h2>
+        <p class="section-subtitle">Obejrzyj nasz proces czyszczenia paneli</p>
+        <div class="video-container">
+            <div class="video-wrapper">
+                <div class="video-placeholder">
+                    <div class="play-button">▶</div>
+                    <p>Kliknij aby odtworzyć wideo</p>
+                </div>
+                <p class="video-caption">Profesjonalne czyszczenie paneli krok po kroku</p>
+            </div>
+            <div class="video-info">
+                <h3>Proces Czyszczenia</h3>
+                <ul class="video-steps">
+                    <li><span class="step-number">1</span> Inspekcja i diagnoza stanu paneli</li>
+                    <li><span class="step-number">2</span> Przygotowanie sprzętu i asekuracji bezpieczeństwa</li>
+                    <li><span class="step-number">3</span> Czyszczenie z użyciem zaawansowanych technologii</li>
+                    <li><span class="step-number">4</span> Kontrola jakości i testy wydajności</li>
+                    <li><span class="step-number">5</span> Raportu końcowy i rekomendacje</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ChatBot Section -->
+    <section id="chatbot" class="chatbot-section">
+        <h2 class="section-title">Chat Asystent</h2>
+        <p class="section-subtitle">Masz pytanie? Napisz do nas!</p>
+        <div class="chatbot-container">
+            <div class="chat-window">
+                <div class="chat-messages">
+                    <div class="message bot-message">
+                        <p>Cześć! 👋 Jestem asystentem SolarClean. Jak się masz? Mogę Ci pomóc z informacjami o naszych usługach.</p>
+                    </div>
+                    <div class="message user-message">
+                        <p>Ile kosztuje czyszczenie paneli?</p>
+                    </div>
+                    <div class="message bot-message">
+                        <p>Ceny zaczynają się od 400 zł dla małych instalacji. Dokładną cenę mogę Ci podać po poznaniu rozmiaru Twojej instalacji. Ile kW masz?</p>
+                    </div>
+                </div>
+                <div class="chat-input">
+                    <input type="text" id="chat-input" placeholder="Napisz wiadomość..." autocomplete="off">
+                    <button id="chat-send-btn">Wyślij</button>
+                </div>
+            </div>
+            <div class="chatbot-info">
+                <h3>Dostępne opcje</h3>
+                <div class="quick-buttons">
+                    <button class="quick-btn">Ceny</button>
+                    <button class="quick-btn">Dostępność</button>
+                    <button class="quick-btn">Gwarancja</button>
+                    <button class="quick-btn">Umów wizytę</button>
+                </div>
+                <p class="chatbot-note">Dostępny 24/7 - odpowiadamy w ciągu minut</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2 class="section-title">Skontaktuj się z Nami</h2>
+        <div class="contact-wrapper">
+            <div class="contact-methods">
+                <div class="contact-method whatsapp-method">
+                    <div class="method-icon-wrapper whatsapp">
+                        <span class="method-icon">💬</span>
+                    </div>
+                    <h3>Szybka Konsultacja</h3>
+                    <p class="method-description">Porozmawiaj z nami przez WhatsApp</p>
+                    <a href="https://wa.me/48889555879" class="method-btn whatsapp-btn" target="_blank">
+                        WhatsApp: +48 889 555 879
+                    </a>
+                    <p class="method-note">Odpowiadamy w ciągu 5 minut ⏱️</p>
+                </div>
+                <div class="contact-method phone-method">
+                    <div class="method-icon-wrapper phone">
+                        <span class="method-icon">📞</span>
+                    </div>
+                    <h3>Zadzwoń do Nas</h3>
+                    <p class="method-description">Bezpośredni kontakt z naszym zespołem</p>
+                    <a href="tel:+48889555879" class="method-btn phone-btn">
+                        +48 889 555 879
+                    </a>
+                    <p class="method-note">Pon-Pt: 8:00-18:00, Sob: 9:00-16:00</p>
+                </div>
+                <div class="contact-method email-method">
+                    <div class="method-icon-wrapper email">
+                        <span class="method-icon">✉️</span>
+                    </div>
+                    <h3>Wyślij Email</h3>
+                    <p class="method-description">Opisz swój problem w wiadomości</p>
+                    <a href="mailto:info@solarclean.pl" class="method-btn email-btn">
+                        info@solarclean.pl
+                    </a>
+                    <p class="method-note">Odpowiedź w ciągu 24h</p>
+                </div>
+            </div>
+
+            <form class="contact-form-wrapper">
+                <h3 class="form-title">Lub napisz do nas tutaj</h3>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Imię i Nazwisko</label>
+                        <input type="text" id="name" placeholder="np. Jan Kowalski" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="twoj@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Telefon</label>
+                        <input type="tel" id="phone" placeholder="+48 123 456 789" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="power">Moc instalacji (kW)</label>
+                        <input type="number" id="power" placeholder="np. 5" min="0.5" step="0.5">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Wiadomość</label>
+                        <textarea id="message" placeholder="Opisz swoją sytuację..." rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Wyślij Zapytanie</button>
+                    <p class="form-note">💚 Odpowiemy tak szybko jak to możliwe</p>
+                </form>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <p>&copy; 2024 SolarClean. Wszystkie prawa zastrzeżone. | Profesjonalne czyszczenie paneli fotowoltaicznych</p>
+            </div>
+            <div class="footer-section social-media">
+                <h4>Śledź nas</h4>
+                <div class="social-links">
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm4.441 15.892c-1.002 1.559-2.85 2.605-4.97 2.605-3.308 0-5.987-2.679-5.987-5.987 0-2.12 1.046-4.025 2.605-4.97-.338.053-.682.081-1.031.081-2.714 0-4.914-2.2-4.914-4.914 0-.348.027-.692.081-1.031-1.559 1.002-2.605 2.85-2.605 4.97 0 3.308 2.679 5.987 5.987 5.987 2.12 0 4.025-1.046 4.97-2.605.053.338.081.682.081 1.031 0 2.714-2.2 4.914-4.914 4.914-.348 0-.692-.027-1.031-.081z"/>
+                        </svg>
+                    </a>
+                    <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube" title="YouTube">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-consent" class="cookie-consent">
+        <div class="cookie-content">
+            <p>Używamy plików cookies, aby zapewnić najlepsze doświadczenie. Klikając "Akceptuję", wyrażasz zgodę na ich użycie. <a href="#" class="cookie-link">Polityka prywatności</a></p>
+            <div class="cookie-buttons">
+                <button class="btn-cookie-reject">Odrzucam</button>
+                <button class="btn-cookie-accept">Akceptuję</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" class="scroll-to-top" aria-label="Przejdź na górę strony" title="Przejdź na górę">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
