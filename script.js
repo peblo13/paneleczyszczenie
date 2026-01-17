@@ -641,7 +641,18 @@ document.addEventListener('DOMContentLoaded', () => {
     initNewsletterValidation();
     initLazyLoading();
     initMobileMenuAnimation();
-    
+    // BLOG: Expand full article on click
+    document.querySelectorAll('.blog-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const full = this.parentElement.querySelector('.blog-full');
+            if (!full) return;
+            const isOpen = full.style.display === 'block';
+            // Hide all others
+            document.querySelectorAll('.blog-full').forEach(f => f.style.display = 'none');
+            if (!isOpen) full.style.display = 'block';
+        });
+    });
     // Hide loading screen
     const loadingScreen = document.getElementById('loading-screen');
     if (loadingScreen) {

@@ -2229,10 +2229,6 @@ body {
         padding: 1.2rem;
     }
 
-    .service-icon {
-        font-size: 2.5rem;
-    }
-
     .contact-wrapper {
         gap: 1.5rem;
         padding: 1.2rem;
@@ -2528,6 +2524,7 @@ body {
     .faq-answer p {
         padding: 0 1rem 1rem;
         font-size: 0.9rem;
+        line-height: 1.4;
     }
 
     .newsletter-form {
@@ -2666,17 +2663,6 @@ body {
         margin-bottom: 0.75rem;
     }
 
-    .service-card h3,
-    .cert-item h3 {
-        font-size: 1rem;
-        margin-bottom: 0.5rem;
-    }
-
-    .service-card p,
-    .cert-item p {
-        font-size: 0.85rem;
-    }
-
     .contact-wrapper {
         gap: 1rem;
         padding: 1rem;
@@ -2808,7 +2794,7 @@ body {
     }
 
     .video-placeholder p {
-        font-size: 0.8rem;
+        font-size:  0.8rem;
     }
 
     .video-caption {
@@ -3048,6 +3034,18 @@ body {
         padding: 1rem 0.75rem;
         font-size: 0.85rem;
     }
+}
+
+/* Blog full article (expand) */
+.blog-full {
+    margin-top: 1.2rem;
+    background: rgba(0,212,255,0.07);
+    border-left: 4px solid var(--primary-color);
+    padding: 1.2rem 1.5rem;
+    border-radius: 10px;
+    color: var(--text-secondary);
+    font-size: 1.05em;
+    animation: fadeIn 0.4s;
 }
 
 /* ============================================================================
