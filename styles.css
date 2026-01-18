@@ -853,22 +853,11 @@ body {
     letter-spacing: 1px;
     transition: all 0.3s ease;
     margin-top: 1rem;
-    font-size: 0.95rem;
 }
 
 .submit-btn:hover {
     transform: scale(1.05);
     box-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
-}
-
-.submit-btn:active {
-    transform: scale(0.98);
-}
-
-.form-note {
-    text-align: center;
-    color: var(--text-secondary);
-    font-size: 0.9rem;
 }
 
 /* ============================================================================
@@ -1922,16 +1911,33 @@ body {
 
 /* Tablets: 769px - 1024px */
 @media (max-width: 1024px) {
-    .contact-wrapper,
-    .calculator-container,
-    .coverage-container,
-    .video-container,
-    .chatbot-container {
-        grid-template-columns: 1fr;
+    .nav-menu {
+        display: none !important;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 70vw;
+        height: 100vh;
+        background: #fff;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2rem 1.5rem;
+        z-index: 1001 !important;
+        box-shadow: 0 0 20px rgba(0,0,0,0.15);
     }
-
-    .pricing-card.featured {
-        transform: scale(1);
+    .nav-menu.active {
+        display: flex !important;
+    }
+    .hamburger {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        z-index: 1100 !important;
+        position: relative;
     }
 }
 
@@ -2148,7 +2154,7 @@ body {
 /* Smartphones: 481px - 599px */
 @media (max-width: 599px) {
     :root {
-        font-size: 13px;
+        font-size: 16px;
     }
 
     .navbar {
@@ -2567,10 +2573,10 @@ body {
 /* Very Small Phones: < 480px (iPhone SE, iPhone 8, etc.) */
 @media (max-width: 480px) {
     :root {
-        font-size: 30px; /* ekstremalnie duża czcionka na najmniejszych ekranach */
+        font-size: 14px; /* mniejsza czcionka na najmniejszych ekranach */
     }
     body {
-        font-size: 1.35rem;
+        font-size: 1rem;
     }
     .scroll-to-top {
         width: 40px;
@@ -2713,7 +2719,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+       flex-wrap: wrap;
     gap: 2rem;
 }
 
@@ -3057,10 +3063,10 @@ body {
 
 @media (max-width: 480px) {
     html {
-        font-size: 30px; /* ekstremalnie duża czcionka na najmniejszych ekranach */
+        font-size: 14px; /* mniejsza czcionka na najmniejszych ekranach */
     }
     body {
-        font-size: 1.35rem;
+        font-size: 1rem;
     }
     .scroll-to-top {
         width: 40px;
